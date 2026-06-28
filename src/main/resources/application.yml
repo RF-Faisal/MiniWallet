@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: mini-wallet
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/miniwallet
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:321}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+
+server:
+  port: 8080
+
+app:
+  jwt:
+    access-token-expiration: 900000    # 15 minutes in milliseconds
+    refresh-token-expiration: 604800000 # 7 days in milliseconds
+    secret: ${JWT_SECRET:404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970337336763979244226452948404D635166546A576E5A7234753778214125442A47}

@@ -1,0 +1,54 @@
+# Maven build output
+target/
+*.jar
+*.war
+*.ear
+
+# Maven wrapper (optional - can keep if you want to distribute it)
+# mvnw
+# mvnw.cmd
+# .mvn/
+
+# IDE - IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# IDE - Eclipse
+.settings/
+.project
+.classpath
+bin/
+*.class
+
+# IDE - VS Code
+.vscode/
+*.code-workspace
+
+# IDE - NetBeans
+nbproject/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# OS files
+Thumbs.db
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Environment files
+.env
+*.log
+
+# Database files (H2 file-based DB)
+data/
+
+# Spring Boot application properties with secrets
+application-local.yml
+application-dev.yml
